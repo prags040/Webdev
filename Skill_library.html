@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: green;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: green;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+*{
+  box-sizing: border-box;
+ }
+
+body {
+ margin: 0;
+}
+
+div.navbar {
+ overflow: hidden;
+ background-color: black;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+div.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+div.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+div.dropdown .dropbtn {
+ font-size: 16px;  
+ border: none;
+ outline: none;
+ color: white;
+ padding: 14px 16px;
+ background-color: inherit;
+ font: inherit;
+ margin: 0;
+}
+
+div.navbar a:hover, .dropdown:hover .dropbtn {
+ background-color: #333;
+}
+
+div.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f9f9f9;
+ width: 100%;
+ left: 0;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+div.dropdown-content .header {
+ background: black;
+ padding: 16px;
+ color: white;
+}
+
+div.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+
+div.column {
+ float: left;
+ width: 33.33%;
+ padding: 10px;
+ background-color: #EFECE9;
+ height: 250px;
+}
+
+div.column a {
+ float: none;
+ color: black;
+ padding: 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left; 
+}
+
+div.column a:hover {
+ background-color: #ddd;
+}
+
+div.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  div.column {
+    width: 100%;
+    height: auto;
+  }
+}
+.login {
+  float: right;
+  overflow: hidden;
+  color: green;
+}
+.TryDemo {
+  float: right;
+  overflow: hidden;
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  float:right;
+}
+
+input[type=text]:focus {
+  width: 50%;
+}
+</style>
+</head>
+<body>
+  <body bgcolor="#EFECE9">
+
+  <div class="navbar navbar-fixed-top">
+   <div class="TryDemo">
+     <a href="try_demo1.html">Try Demo</a>
+   </div>
+   <div class="login">
+     <a href="login_page.html">Login</a>
+   </div>
+
+   <a class="navbar-brand" href="#">AA Software</a>
+   <a href="index.html">Home</a>
+   <a href="Skill_library.html">Skill Library</a>
+   <a href="pricing.html">Pricing</a>
+  
+   <div class="dropdown">
+    
+     <button class="dropbtn">Feature
+   
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Features</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/industries.svg" width="10%">
+          <a href="#">Enterprise Readiness</a>
+          <a href="#">Security & Compliances</a>
+          <a href="#">Role Based Access Control</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/enterprise-assessment-platform.svg" width="10%">
+          <a href="#">Enterprise Assessment Platform</a>
+          <a href="#">Validity & Reliability</a>
+          <a href="#">Video Interview Questions</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/reporting-analytics.svg" width="10%">
+          <a href="#">Reporting & Analytics</a>
+          <a href="#">Customized Performance Report</a>
+          <a href="#">Comparative Report</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/cheating-prevention.svg" width="10%">
+          <a href="#">Cheating Prevention</a>
+          <a href="#">Real Time Image Proctoring</a>
+          <a href="#">Randomization</a>
+         </div>
+         <div class="column">
+           <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/customer-support.svg" width="10%">
+           <a href="#">Customer Success & Support</a>
+           <a href="#">Training & On Boarding</a>
+           <a href="#">Assistance For Custom Test</a>
+         </div>
+         <div class="column">
+          <img src=""> 
+          <a href="#">  </a>
+           
+         </div>
+       </div>
+     </div>
+   </div> 
+ </div>
+
+<div class="sidebar">
+  <a class="active" href="#All Skills">All Skills</a>
+  <a href="https://www.fresherslive.com/online-test/aptitude-test/questions-and-answers">Apptitude</a>
+  <a href="https://www.codeconquest.com/what-is-coding/common-programming-languages/">Coding Skills</a>
+  <a href="https://www.business.com/articles/12-business-skills-you-need-to-master/">Business Skills</a>
+  <a href="https://www.reliablesoft.net/best-digital-marketing-courses/">Digital Marketing</a>
+</div>
+<br>
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+
+<div class="content">
+  <h2>ALL SKILLS</h2>
+  <h4>(Select one to view it..)</h4>
+  <br>
+  <a href="https://blog.hubspot.com/marketing/how-to-use-excel-tips"><img src="https://download.logo.wine/logo/Microsoft_Excel/Microsoft_Excel-Logo.wine.png" width=15% height=11%></a>
+  <a href="https://www.programiz.com/cpp-programming"><img src="https://www.freeiconspng.com/uploads/c--logo-icon-0.png" width=10%></a>
+  <a href="https://www.python.org/about/gettingstarted/"><img src="https://www.freepngimg.com/thumb/python_logo/5-2-python-logo-png-image-thumb.png" width=13% height=13%></a><br>
+  <a href="https://www.w3schools.com/js/"><img src="https://pluspng.com/img-png/logo-javascript-png-html-code-allows-to-embed-javascript-logo-in-your-website-587.png" width=15% height=11%></a>
+  <a href="https://www.w3schools.com/nodejs/"><img src="https://pluspng.com/img-png/nodejs-logo-png-node-js-development-296.png" width=10% height=11% ></a>
+  <a href="https://www.programiz.com/c-programming"><img src="https://i.dlpng.com/static/png/228248_preview.png" width=12% height=11%></a>
+  
+</div>
+
+
+</body>
+</html>

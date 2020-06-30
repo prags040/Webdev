@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: black;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+*{
+         box-sizing: border-box;
+        }
+
+body {
+ margin: 0;
+      }
+
+div.navbar {
+ overflow: hidden;
+ background-color: black;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+div.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+div.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+div.dropdown .dropbtn {
+ font-size: 16px;  
+ border: none;
+ outline: none;
+ color: white;
+ padding: 14px 16px;
+ background-color: inherit;
+ font: inherit;
+ margin: 0;
+}
+
+div.navbar a:hover, .dropdown:hover .dropbtn {
+ background-color: #333;
+}
+
+div.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f9f9f9;
+ width: 100%;
+ left: 0;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+div.dropdown-content .header {
+ background: black;
+ padding: 16px;
+ color: white;
+}
+
+div.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+
+div.column {
+ float: left;
+ width: 33.33%;
+ padding: 10px;
+ background-color: #EFECE9;
+ height: 250px;
+}
+
+div.column a {
+ float: none;
+ color: black;
+ padding: 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left; 
+}
+
+div.column a:hover {
+ background-color: #ddd;
+}
+
+div.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  div.column {
+    width: 100%;
+    height: auto;
+  }
+}
+.login {
+  float: right;
+  overflow: hidden;
+  color: green;
+}
+.TryDemo {
+  float: right;
+  overflow: hidden;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+   <div class="TryDemo">
+     <a href="try_demo1.html">Try Demo</a>
+   </div>
+   <div class="login">
+     <a href="login_page.html">Login</a>
+   </div>
+
+   <a class="navbar-brand" href="#">AA Software</a>
+   <a href="index.html">Home</a>
+   <a href="Skill_library.html">Skill Library</a>
+   <a href="pricing.html">Pricing</a>
+  
+   <div class="dropdown">
+    
+     <button class="dropbtn">Feature
+   
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Features</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/industries.svg" width="10%">
+          <a href="#">Enterprise Readiness</a>
+          <a href="#">Security & Compliances</a>
+          <a href="#">Role Based Access Control</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/enterprise-assessment-platform.svg" width="10%">
+          <a href="#">Enterprise Assessment Platform</a>
+          <a href="#">Validity & Reliability</a>
+          <a href="#">Video Interview Questions</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/reporting-analytics.svg" width="10%">
+          <a href="#">Reporting & Analytics</a>
+          <a href="#">Customized Performance Report</a>
+          <a href="#">Comparative Report</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/cheating-prevention.svg" width="10%">
+          <a href="#">Cheating Prevention</a>
+          <a href="#">Real Time Image Proctoring</a>
+          <a href="#">Randomization</a>
+         </div>
+         <div class="column">
+           <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/customer-support.svg" width="10%">
+           <a href="#">Customer Success & Support</a>
+           <a href="#">Training & On Boarding</a>
+           <a href="#">Assistance For Custom Test</a>
+         </div>
+         <div class="column">
+          <img src=""> 
+          <a href="#">  </a>
+           
+         </div>
+       </div>
+     </div>
+   </div> 
+ </div>
+ <br>
+ <br>
+ <br>
+ <h2 style="text-align:center">Choose a plan that is right for you !</h2>
+ <hr style="width:40% ;height:4px;border-width:0;color:gray;background-color:black">
+ <div class="columns">
+   <ul class="price">
+     <li class="header" style="background-color:silver" >Silver</li>
+     <li class="grey">$ 80 / 30 days<br> Paid Monthly</li>
+     <li>1 Users Only</li>
+     <li>30 Test Attempts</li>
+     <li>No Custom Test</li>
+     <li>Valid For 30 Days</li>
+     <li class="grey"><a href="#" class="button">Buy Now</a></li>
+   </ul>
+ </div>
+
+ <div class="columns">
+   <ul class="price">
+     <li class="header" style="background-color: gold">Gold</li>
+     <li class="grey">$ 150 / 90 days<br> paid 3 months</li>
+     <li>2 Users Only</li>
+     <li>90 Test Attempts</li>
+     <li>3 Custom Test</li>
+     <li>Valid For 90 Days</li>
+     <li class="grey"><a href="#" class="button">Buy Now</a></li>
+   </ul>
+ </div>
+
+ <div class="columns">
+   <ul class="price">
+     <li class="header" style="background-color: #e0115f">Ruby</li>
+     <li class="grey">$ 250 / 12 Months<br>Paid Annually</li>
+     <li>5 Users</li>
+     <li>120 Test Attempts</li>
+     <li>7 Custom Test</li>
+     <li>Valid For 365 Days</li>
+     <li class="grey"><a href="#" class="button">Buy Now</a></li>
+   </ul>
+ </div>
+ 
+ <br>
+ <center>
+   <p><h2>Get Yours Now!</h2></p>
+  </center>
+ <hr style="width:40% ;height:4px;border-width:0;color:gray;background-color:black">
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  input[type=submit] {
+       width: 20%;
+       background-color: #4CAF50;
+       color: white;
+       padding: 14px 20px;
+       margin: 8px 0;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+      }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #333;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: black;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #EFECE9;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');{
+  .jumbotron {
+    font-family: 'Sansita', sans-serif;
+  }
+}
+.login {
+  float: right;
+  overflow: hidden;
+  color: green;
+}
+.TryDemo {
+  float: right;
+  overflow: hidden;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: black;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="TryDemo">
+    <a href="try_demo1.html">Try Demo</a>
+  </div>
+  <div class="login">
+    <a href="login_page.html">Login</a>
+  </div>
+
+  <a class="navbar-brand" href="">AA Software</a>
+  <a href="index.html">Home</a>
+  <a href="Skill_library.html">Skill Library</a>
+  <a href="pricing.html">Pricing</a>
+  
+  <div class="dropdown">
+    
+     <button class="dropbtn">Feature
+   
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Features</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/industries.svg" width="10%">
+          <a href="#">Enterprise Readiness</a>
+          <a href="#">Security & Compliances</a>
+          <a href="#">Role Based Access Control</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/enterprise-assessment-platform.svg" width="10%">
+          <a href="#">Enterprise Assessment Platform</a>
+          <a href="#">Validity & Reliability</a>
+          <a href="#">Video Interview Questions</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/reporting-analytics.svg" width="10%">
+          <a href="#">Reporting & Analytics</a>
+          <a href="#">Customized Performance Report</a>
+          <a href="#">Comparative Report</a>
+        </div>
+        <div class="column">
+          <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/cheating-prevention.svg" width="10%">
+          <a href="#">Cheating Prevention</a>
+          <a href="#">Real Time Image Proctoring</a>
+          <a href="#">Randomization</a>
+         </div>
+         <div class="column">
+           <img src="https://www.interviewmocha.com/Content/images/navigation-thumbnails/customer-support.svg" width="10%">
+           <a href="#">Customer Success & Support</a>
+           <a href="#">Training & On Boarding</a>
+           <a href="#">Assistance For Custom Test</a>
+         </div>
+         <div class="column">
+          <img src=""> 
+          <a href="#">  </a>
+           
+         </div>
+
+      </div>
+    </div>
+  </div> 
+</div>
+<div class="container-full-bg">
+     <div class="jumbotron" style="background-color:#EFECE9">
+      <div class="container">
+        <br>
+         <h1>LARGEST COLLECTION OF ASSESSMENTS FOR WHITE COLLAR JOBS</h1>
+         <br>
+         <h2>COME , JOIN US...</h2>
+         <img src="https://cdn.clipart.email/992a6b0d96d60fe97438c8564e294077_wwccg50-hd-free-work-with-computer-clipart-gif-pack-4663_800-600.gif" alt="working" class="side" width="300" height="250" align="right">
+         <form action="try_demo1.html" method="post">
+          <h2><input type="submit" value="TRY DEMO"></h2>
+         </form>
+
+        </div>
+  </div>
+</div>
+<div class="container2">
+  <center>
+  <img src="https://www.interviewmocha.com/Content/images/benefits/assessment-library.svg" width="90" height="90" class="image1">
+  <b><h3> Skill assessment library</b></h3>
+    <h4>Our skill library includes 500+ IT skills, 20+ Coding languages, 50+ Next-Gen skills and more…</h4>
+  <hr style="width:40% ;height:2px;border-width:0;color:gray;background-color:black">
+
+  <img src="https://www.interviewmocha.com/Content/images/benefits/hiring-decision.svg" width="90" height="90" class="image2">
+  <b><h3>Data-driven hiring decisions</b></h3>
+  <h4>Take out gut feeling and biases from the hiring decisions Make your recruitment a competitive advantage.</h4>
+  <hr style="width:40% ;height:2px;border-width:0;color:gray;background-color:black">
+
+  <img src="https://www.interviewmocha.com/Content/images/benefits/integration.svg" width="90" height="90" class="image3">
+  <b><h3>Seamless integrations that delight recruiters</b></h3>
+  <h4>Connect with your favorite ATS through our 1-Click integration.Keep your recruiting processes streamlined. </h4>
+  <hr style="width:40% ;height:2px;border-width:0;color:gray;background-color:black">
+
+  <img src="https://www.interviewmocha.com/Content/images/benefits/support.svg" width="90" height="90" class="image4">
+  <b><h3>Dependable support</b></h3>
+  <h4>Leverage the experience of our success and support teams who work with you in every stage of assessment.</h4>
+  <hr style="width:40% ;height:2px;border-width:0;color:gray;background-color:black">
+</center>
+</div>
+<div class="container-full-bg">
+  <div class="jumbotron" style="background-color:#EFECE9">
+    <div class="container">
+     <b><h2>“AA Software helped us to cut down on our candidate <br>filtration time by 40%, making it our preferred <br>assessment software.”</b></h2>
+      <h3>~ Martin loyld- CEO, AA software</h3>
+      <img src="https://www.photographytalk.com/images/articles/2019/07/24/images/articles/2019/07/22/poses_for_photography_male_subjects.jpg" alt="person" class="side2" width="550" height="470" align="right">
+    </div>
+ </div>
+</div>
+<div class="container4">
+  <center>
+    <b><h1>Trusted by leading brands<br> worldwide</h1><b>
+   <div class="row">
+    <div>
+      <img src="https://www.interviewmocha.com/Content/images/customer/customer-thumbnail/altran-logo.png" alt="ALTRAN" style="width:20%">
+    </div>
+    <div>
+      <img src="https://www.interviewmocha.com/Content/images/customer/customer-thumbnail/capgemein-logo.png" alt="CAPGEMEIN" style="width:20%">
+    </div>
+    <div>
+      <img src="https://www.interviewmocha.com/Content/images/customer/customer-thumbnail/avaya.png" alt="AVAYA" style="width:20%">
+    </div>
+    <div>
+      <img src="https://www.interviewmocha.com/Content/images/customer/customer-thumbnail/hexaware-logo.png" alt="HEXAWARE" style="width:20%">
+    </div>
+    <hr style="width:40% ;height:2px;border-width:0;color:gray;background-color:black">
+  </div>
+</div>
+
+
+<div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1></h1>
+    <ul>
+      <li>About Us </li>
+      <li></li>
+      <li>Blog</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1></h1>
+    <ul>
+      <li>Partners</li>
+      <li></li>
+      <li>Site Map</li>
+      </ul>
+  </div>
+  <div class="col">
+    <h1></h1>
+    <ul>
+      <li>Careers</li>
+      <li></li>
+      <li>API DOC</li>
+      </ul>
+  </div>
+  <div class="col">
+    <h1></h1>
+    <ul>
+      <li>Web Chat</li>
+      <li></li>
+      <li>GDPR</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1></h1>
+    <ul>
+      
+      <li></li>
+      <li>Helpline<br>+1-408-556-7651</li>
+    </ul>
+  </div>
+  <div class="col social">
+    <head></head><br>
+     <ul>
+      <li><img src="https://cdn1.iconfinder.com/data/icons/social-media-2285/512/Colored_Facebook3_svg-128.png" width="32" style="width: 32px;"></li>
+      <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-128.png" width="32" style="width: 32px;"></li>
+      <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-128.png" width="32" style="width: 32px;"></li> 
+      <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-128.png" width="32" style="width: 34px;"></li>
+      <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-128.png" width="32" style="width: 32px;"></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+</div>
+
+
+</body>
+</html>
